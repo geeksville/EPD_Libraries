@@ -1,0 +1,13 @@
+{
+    "name": "EPD_Libraries",
+    "version": "1.0.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/geeksville/EPD_Libraries.git"
+    },
+    "authors": {
+        "name": "@Bodmer",
+        "url": "https://github.com/Bodmer/EPD_Libraries"
+    },
+    "srcDir": "."
+}
