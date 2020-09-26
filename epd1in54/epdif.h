@@ -30,6 +30,7 @@
 
 #include <Arduino.h>
 
+#ifndef BUSY_PIN
 // Pin definition for ESP8266 (e.g. NodeMCU)
 // Connect display CLK signal to GPIO 14 (Node MCU pin D5)
 // Connect display DIN signal to GPIO 13 (Node MCU pin D7)
@@ -37,20 +38,21 @@
 // Connect display GND to NodeMCU GND
 // Connect other pins as follows:
 //      Display       GPIO   NodeMCU pin
-#define BUSY_PIN        5 // D1
-#define RST_PIN         4 // D2
-#define DC_PIN          0 // D3
-#define CS_PIN          2 // D4
+#define BUSY_PIN 5 // D1
+#define RST_PIN 4  // D2
+#define DC_PIN 0   // D3
+#define CS_PIN 2   // D4
+#endif
 
-
-class EpdIf {
-public:
+class EpdIf
+{
+  public:
     EpdIf(void);
     ~EpdIf(void);
 
-    static int  IfInit(void);
-    static void DigitalWrite(int pin, int value); 
-    static int  DigitalRead(int pin);
+    static int IfInit(void);
+    static void DigitalWrite(int pin, int value);
+    static int DigitalRead(int pin);
     static void DelayMs(unsigned int delaytime);
     static void SpiTransfer(unsigned char data);
 };
