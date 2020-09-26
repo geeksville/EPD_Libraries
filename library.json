@@ -9,5 +9,7 @@
         "name": "@Bodmer",
         "url": "https://github.com/Bodmer/EPD_Libraries"
     },
-    "srcDir": "epd1in54"
+    "build": {
+        "srcDir": "epd1in54"
+    }
 }
